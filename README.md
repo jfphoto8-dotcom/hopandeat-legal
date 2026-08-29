@@ -153,6 +153,131 @@
       vertical-align: middle;
     }
 
+    /* ── SCREENSHOTS ── */
+    .screenshots {
+      background: linear-gradient(180deg, #FBF7F4 0%, #F0E8DF 100%);
+      padding: 80px 24px 96px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .screenshots h2 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      color: #3E1F0D;
+      margin-bottom: 14px;
+    }
+    .screenshots > p {
+      color: #7D4A2A;
+      font-size: 17px;
+      max-width: 480px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+    }
+
+    /* Carrusel */
+    .carousel-wrapper {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    /* Cada slide */
+    .phone-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      flex: 0 0 auto;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .phone-slide.side {
+      transform: scale(0.88);
+      opacity: 0.6;
+    }
+    .phone-slide.center {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    /* Marco del iPhone */
+    .phone-frame {
+      width: 220px;
+      border-radius: 36px;
+      background: #1A0A04;
+      padding: 10px;
+      box-shadow:
+        0 0 0 1.5px #3E1F0D,
+        0 32px 64px rgba(62,31,13,0.35),
+        0 8px 24px rgba(62,31,13,0.2);
+      position: relative;
+    }
+    /* Notch */
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 22px;
+      background: #1A0A04;
+      border-radius: 0 0 16px 16px;
+      z-index: 2;
+    }
+    .phone-frame img {
+      width: 100%;
+      border-radius: 28px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Caption bajo el teléfono */
+    .phone-caption {
+      text-align: center;
+    }
+    .phone-caption strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #3E1F0D;
+      margin-bottom: 4px;
+    }
+    .phone-caption span {
+      font-size: 13px;
+      color: #9A6240;
+      line-height: 1.5;
+    }
+
+    /* Dots de navegación */
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #C47A2B;
+      opacity: 0.3;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      border: none;
+      padding: 0;
+    }
+    .dot.active {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+
     /* PRICING */
     .pricing {
       background: #3E1F0D;
@@ -218,6 +343,27 @@
     footer .links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
     footer .links a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; }
     footer .links a:hover { color: #C47A2B; }
+
+    /* RESPONSIVE screenshots */
+    @media (max-width: 700px) {
+      .phone-frame { width: 180px; }
+      .phone-slide.side { display: none; }
+      .carousel-track { gap: 0; }
+    }
+
+    /* Animación de entrada scroll */
+    .phone-slide {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .phone-slide.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .phone-slide:nth-child(1) { transition-delay: 0s; }
+    .phone-slide:nth-child(2) { transition-delay: 0.12s; }
+    .phone-slide:nth-child(3) { transition-delay: 0.24s; }
   </style>
 </head>
 <body>
@@ -269,6 +415,58 @@
         <div class="card-icon">📱</div>
         <h3>Compartir</h3>
         <p>Comparte restaurantes por WhatsApp con un solo toque.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="screenshots">
+    <div class="section-label">La app en acción</div>
+    <h2>Mírala por dentro</h2>
+    <p>Diseñada para que encontrar un sitio donde comer sea rápido, fácil y sin fricciones.</p>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Slide 1: Login -->
+        <div class="phone-slide" data-index="0">
+          <div class="phone-frame">
+            <img src="screenshot_hop_and_eat_3.jpeg" alt="Pantalla de bienvenida de Hop&Eat" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <strong>Entra en segundos</strong>
+            <span>Con Apple, Google<br>o email</span>
+          </div>
+        </div>
+
+        <!-- Slide 2: Home -->
+        <div class="phone-slide" data-index="1">
+          <div class="phone-frame">
+            <img src="Screenshot_hop_and_eat.jpeg" alt="Pantalla principal con restaurantes cercanos" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <strong>Restaurantes cerca</strong>
+            <span>Ordenados por distancia,<br>con fotos y valoraciones reales</span>
+          </div>
+        </div>
+
+        <!-- Slide 3: Favoritos -->
+        <div class="phone-slide" data-index="2">
+          <div class="phone-frame">
+            <img src="screenshot_hop_and_eat_2.jpeg" alt="Pantalla de favoritos" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <strong>Tus favoritos</strong>
+            <span>Guarda los sitios que más<br>te gustan para volver pronto</span>
+          </div>
+        </div>
+
+      </div><!-- /.carousel-track -->
+
+      <div class="carousel-dots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
       </div>
     </div>
   </section>
@@ -329,6 +527,33 @@
     </div>
     <p style="margin-top:20px;">© 2026 Hop&Eat · España</p>
   </footer>
+
+  <script>
+    // ── Animación de entrada al hacer scroll ──
+    const slides = document.querySelectorAll('.phone-slide');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    slides.forEach(s => observer.observe(s));
+
+    // ── Dots de navegación (solo mobile) ──
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+        // En mobile (solo 1 visible) hacemos scroll al slide
+        const allSlides = document.querySelectorAll('.phone-slide');
+        if (allSlides[i]) {
+          allSlides[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
