@@ -14,6 +14,7 @@
     th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
     th { background: #f5f0eb; color: #5C3317; }
     .highlight { background: #FFF3E8; border-left: 4px solid #C47A2B; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+    .warning { background: #FCEAEA; border-left: 4px solid #B33A3A; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
     .lang-divider { border: none; border-top: 3px dashed #C47A2B; margin: 60px 0; }
     .lang-badge { display: inline-block; background: #5C3317; color: white; font-size: 13px; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
@@ -27,8 +28,8 @@
 <div class="lang-badge">🇬🇧 English</div>
 
 <h1>🍺 Privacy Policy — Hop&Eat</h1>
-<p><strong>Last updated:</strong> August 28, 2026<br>
-<strong>Version:</strong> 1.0</p>
+<p><strong>Last updated:</strong> September 8, 2026<br>
+<strong>Version:</strong> 2.0</p>
 
 <div class="highlight">
   This Privacy Policy explains how Hop&Eat collects, uses, and protects your personal information, in compliance with the <strong>General Data Protection Regulation (GDPR)</strong> and applicable Spanish law.
@@ -56,21 +57,25 @@
 <h3>3.4 Subscription Data</h3>
 <p>Payment data for Premium subscriptions is handled exclusively by Apple App Store or Google Play. We only receive subscription status confirmation via RevenueCat. <strong>Legal basis:</strong> Performance of contract.</p>
 
-<h3>3.5 Artificial Intelligence</h3>
-<p>Hop&Eat uses AI (Anthropic's Claude API) to generate automatic summaries of restaurant reviews. This feature:</p>
+<h3>3.5 Artificial Intelligence (Review Summaries)</h3>
+<p>Hop&Eat uses AI (Anthropic's Claude API) to generate automatic summaries of publicly available restaurant reviews retrieved from Google Places. This feature:</p>
 <ul>
   <li>Is available exclusively to Premium users</li>
   <li>Processes public Google Places reviews, not personal user data</li>
-  <li>Does not store processed reviews or generated summaries on our servers</li>
-  <li>Generated summaries may contain inaccuracies</li>
+  <li>Does not store the underlying reviews or the generated summaries on our servers beyond the time strictly needed to generate and deliver the response</li>
+  <li>Relies on an automated language model and <strong>may produce summaries that are incomplete, outdated, or factually inaccurate</strong></li>
+  <li>Is provided for general informational and convenience purposes only, and does not constitute advice of any kind (culinary, dietary, allergen-related, medical, or otherwise)</li>
 </ul>
+<div class="warning">
+  <strong>Important:</strong> You are solely responsible for any decision you make in reliance on an AI-generated summary, including decisions related to allergens, dietary restrictions, opening hours, pricing, or the suitability of an establishment. Hop&Eat is not liable for any loss, damage, or harm arising from reliance on AI-generated content. Always verify important information directly with the establishment before visiting.
+</div>
 <p><strong>Legal basis:</strong> Legitimate interest / implicit consent upon subscribing to Premium.</p>
 
-<h2>4. Cookies</h2>
-<p>Hop&Eat is a mobile app and <strong>does not use tracking cookies</strong>. We use local device storage (AsyncStorage) solely to save your session, language, and theme preferences. This data is never shared with third parties for advertising purposes.</p>
+<h2>4. Cookies and Local Storage</h2>
+<p>Hop&Eat is a native mobile application and <strong>does not use cookies</strong>, web trackers, pixels, or third-party advertising identifiers of any kind. We use local storage on your own device (AsyncStorage) solely to remember your session, language, and theme preferences. This local data stays on your device, is never transmitted to our servers as a tracking mechanism, and is never shared with third parties for advertising or profiling purposes. If a future web version of Hop&Eat introduces cookies, this section will be updated and, where legally required, accompanied by a cookie consent mechanism.</p>
 
 <h2>5. Third-Party Services and International Transfers</h2>
-<p>Some providers are located outside the European Economic Area (EEA). Transfers are covered by appropriate safeguards (EU Standard Contractual Clauses or adequacy decisions).</p>
+<p>Some providers are located outside the European Economic Area (EEA). Transfers are covered by appropriate safeguards (EU Standard Contractual Clauses, the EU-U.S. Data Privacy Framework where applicable, or adequacy decisions).</p>
 <table>
   <tr><th>Service</th><th>Purpose</th><th>Country</th><th>Privacy Policy</th></tr>
   <tr><td>Google Places API</td><td>Restaurant search and reviews</td><td>USA</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
@@ -82,30 +87,54 @@
 </table>
 <p>We do not sell, rent, or share your personal data with third parties for advertising purposes.</p>
 
-<h2>6. Minimum Age</h2>
-<p>Hop&Eat is not directed at children under <strong>13 years old</strong>. If you are a parent or guardian and believe your child has provided personal data, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> to have it deleted.</p>
+<h2>6. Third-Party Data Accuracy and Limitation of Liability</h2>
+<p>Restaurant names, addresses, opening hours, photos, ratings, and reviews displayed in Hop&Eat are sourced from the Google Places API and reflect data supplied by Google and by third parties (restaurant owners, other platform users). Hop&Eat:</p>
+<ul>
+  <li>Does not independently verify, edit, or guarantee the accuracy, completeness, or currency of this third-party data</li>
+  <li>Has no control over, and assumes no responsibility for, errors, omissions, or changes in this data (for example, a restaurant that has closed, changed its hours, or changed its menu)</li>
+  <li>Is not responsible for the content of third-party reviews, which express the opinions of their individual authors and not of Hop&Eat</li>
+</ul>
+<p>To the maximum extent permitted by applicable law, Hop&Eat disclaims all liability for any loss or damage resulting from your reliance on restaurant information, ratings, reviews, or AI-generated summaries derived from this third-party data. This section does not affect any statutory rights that cannot be excluded under Spanish or EU consumer protection law.</p>
 
-<h2>7. Your Rights (GDPR)</h2>
-<p>If you are an EU resident, you have the right to: access, rectification, erasure ("right to be forgotten"), data portability, objection, restriction, and to withdraw consent at any time.</p>
-<p>To delete your account and all data: <strong>Profile → Delete account</strong> in the app.</p>
-<p>To exercise any other right, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <strong>Spanish Data Protection Agency (AEPD)</strong>: <a href="https://www.aepd.es">www.aepd.es</a>.</p>
+<h2>7. Children's Privacy / Minimum Age</h2>
+<p>Hop&Eat is not directed at children under <strong>13 years old</strong>, and we do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child has provided personal data to us, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> and we will delete it promptly.</p>
 
-<h2>8. Data Retention</h2>
+<h2>8. Your Rights (GDPR)</h2>
+<p>If you are located in the European Union / European Economic Area, you have the following rights under the GDPR:</p>
+<ul>
+  <li><strong>Access</strong> — obtain confirmation of, and access to, the personal data we hold about you</li>
+  <li><strong>Rectification</strong> — correct inaccurate or incomplete data</li>
+  <li><strong>Erasure</strong> ("right to be forgotten") — request deletion of your data</li>
+  <li><strong>Restriction of processing</strong></li>
+  <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format</li>
+  <li><strong>Objection</strong> to processing based on legitimate interest</li>
+  <li><strong>Withdrawal of consent</strong> at any time, without affecting the lawfulness of processing carried out before withdrawal</li>
+  <li><strong>Not to be subject to a decision based solely on automated processing</strong> that produces legal or similarly significant effects — note that AI-generated review summaries are purely informational and do not involve automated decision-making about you as an individual</li>
+</ul>
+<p>You can exercise the right to erasure directly and immediately using <strong>Profile → Delete account</strong> in the app. To exercise any other right, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a>. We will respond within one month (extendable by a further two months for complex requests, as permitted by GDPR Article 12).</p>
+<p>You also have the right to lodge a complaint with the <strong>Spanish Data Protection Agency (AEPD)</strong>: <a href="https://www.aepd.es">www.aepd.es</a>, or with the data protection authority of your EU member state of residence.</p>
+
+<h2>9. Data Retention Periods</h2>
 <table>
   <tr><th>Data type</th><th>Retention period</th></tr>
-  <tr><td>Location</td><td>Not stored (real-time processing)</td></tr>
-  <tr><td>Account data</td><td>Until account deletion</td></tr>
-  <tr><td>Favourites</td><td>Until deleted or account is closed</td></tr>
-  <tr><td>Subscription data</td><td>Managed by Apple/Google per their policies</td></tr>
+  <tr><td>Location</td><td>Not stored — processed in real time and discarded immediately after use</td></tr>
+  <tr><td>Account data (name, email, auth provider, photo)</td><td>Retained while your account is active; deleted within 30 days of an account-deletion request</td></tr>
+  <tr><td>Favourites and preferences</td><td>Retained while your account is active; deleted with the account</td></tr>
+  <tr><td>AI review summaries and queries</td><td>Not stored beyond the time needed to generate and deliver the response</td></tr>
+  <tr><td>Subscription / billing data</td><td>Managed by Apple/Google per their own policies; we retain only subscription status confirmations while the account is active</td></tr>
+  <tr><td>Technical/error logs</td><td>Up to 90 days</td></tr>
+  <tr><td>Support and contact emails</td><td>Up to 24 months, then deleted</td></tr>
+  <tr><td>Rolling system backups</td><td>Up to 30 days before automatic overwrite</td></tr>
 </table>
+<p>Where we are required to retain certain data for longer to comply with a legal obligation (for example, tax or accounting law), we do so only for the minimum period required and only for that purpose.</p>
 
-<h2>9. Security</h2>
-<p>We apply appropriate technical and organisational measures including HTTPS/TLS encryption and Firebase access rules. No system is 100% secure.</p>
+<h2>10. Security</h2>
+<p>We apply appropriate technical and organisational measures including HTTPS/TLS encryption and Firebase access rules. In the event of a personal data breach likely to result in a risk to your rights and freedoms, we will notify the AEPD within 72 hours and affected users without undue delay, as required by the GDPR. No system is 100% secure.</p>
 
-<h2>10. Changes to This Policy</h2>
+<h2>11. Changes to This Policy</h2>
 <p>We may update this policy periodically. We will notify you of significant changes through the app. Continued use after notification implies acceptance.</p>
 
-<h2>11. Contact</h2>
+<h2>12. Contact</h2>
 <p>📧 <a href="mailto:support@hopandeat.app">support@hopandeat.app</a></p>
 
 <hr class="lang-divider">
@@ -114,8 +143,8 @@
 <div class="lang-badge">🇪🇸 Español</div>
 
 <h1>🍺 Política de Privacidad — Hop&Eat</h1>
-<p><strong>Última actualización:</strong> 28 de agosto de 2026<br>
-<strong>Versión:</strong> 1.0</p>
+<p><strong>Última actualización:</strong> 8 de septiembre de 2026<br>
+<strong>Versión:</strong> 2.0</p>
 
 <div class="highlight">
   Esta política de privacidad explica cómo Hop&Eat recopila, usa y protege tu información personal, de conformidad con el <strong>Reglamento General de Protección de Datos (GDPR)</strong> y la legislación española aplicable.
@@ -132,7 +161,7 @@
 <h2>3. Datos que recopilamos y base legal</h2>
 
 <h3>3.1 Ubicación</h3>
-<p>Solicitamos acceso a tu GPS para mostrarte restaurantes cercanos. <strong>Base legal:</strong> Ejecución del contrato / interés legítimo. No almacenamos tu ubicación en nuestros servidores. Puedes revocar el acceso en los ajustes de tu dispositivo.</p>
+<p>Solicitamos acceso a tu GPS para mostrarte restaurantes cercanos. <strong>Base legal:</strong> Ejecución del contrato / interés legítimo. No almacenamos tu ubicación en nuestros servidores; se procesa en tiempo real. Puedes revocar el acceso en los ajustes de tu dispositivo.</p>
 
 <h3>3.2 Datos de cuenta</h3>
 <p>Si te registras, recopilamos tu nombre, email, foto de perfil (opcional) y proveedor de autenticación (Apple, Google o email). <strong>Base legal:</strong> Ejecución del contrato.</p>
@@ -143,21 +172,25 @@
 <h3>3.4 Datos de suscripción</h3>
 <p>Los datos de pago Premium son gestionados exclusivamente por Apple App Store o Google Play. Solo recibimos confirmación del estado de tu suscripción a través de RevenueCat. <strong>Base legal:</strong> Ejecución del contrato.</p>
 
-<h3>3.5 Inteligencia Artificial</h3>
-<p>Hop&Eat utiliza IA (API de Claude de Anthropic) para generar resúmenes automáticos de reseñas. Esta función:</p>
+<h3>3.5 Inteligencia Artificial (resúmenes de reseñas)</h3>
+<p>Hop&Eat utiliza IA (API de Claude de Anthropic) para generar resúmenes automáticos de reseñas públicas obtenidas de Google Places. Esta función:</p>
 <ul>
   <li>Está disponible exclusivamente para usuarios Premium</li>
   <li>Procesa reseñas públicas de Google Places, no datos personales del usuario</li>
-  <li>No almacena las reseñas procesadas ni los resúmenes generados en nuestros servidores</li>
-  <li>Los resúmenes pueden contener imprecisiones</li>
+  <li>No almacena las reseñas procesadas ni los resúmenes generados en nuestros servidores más allá del tiempo estrictamente necesario para generar y entregar la respuesta</li>
+  <li>Se basa en un modelo de lenguaje automatizado y <strong>puede generar resúmenes incompletos, desactualizados o inexactos</strong></li>
+  <li>Se ofrece únicamente con fines informativos y de conveniencia, y no constituye asesoramiento de ningún tipo (culinario, dietético, sobre alérgenos, médico u otro)</li>
 </ul>
+<div class="warning">
+  <strong>Importante:</strong> Eres el único responsable de cualquier decisión que tomes basándote en un resumen generado por IA, incluidas decisiones relacionadas con alérgenos, restricciones dietéticas, horarios, precios o la idoneidad de un establecimiento. Hop&Eat no se hace responsable de ninguna pérdida, daño o perjuicio derivado de confiar en contenido generado por IA. Verifica siempre la información importante directamente con el establecimiento antes de acudir.
+</div>
 <p><strong>Base legal:</strong> Interés legítimo / consentimiento implícito al contratar Premium.</p>
 
-<h2>4. Cookies</h2>
-<p>Hop&Eat es una app móvil y <strong>no utiliza cookies</strong> de seguimiento. Usamos almacenamiento local del dispositivo (AsyncStorage) únicamente para guardar tu sesión, idioma y tema. Estos datos nunca se comparten con terceros con fines publicitarios.</p>
+<h2>4. Cookies y almacenamiento local</h2>
+<p>Hop&Eat es una aplicación móvil nativa y <strong>no utiliza cookies</strong>, rastreadores web, píxeles ni identificadores publicitarios de terceros de ningún tipo. Usamos almacenamiento local en tu propio dispositivo (AsyncStorage) únicamente para recordar tu sesión, idioma y tema. Estos datos permanecen en tu dispositivo, nunca se transmiten a nuestros servidores como mecanismo de seguimiento y nunca se comparten con terceros con fines publicitarios o de perfilado. Si en el futuro se lanza una versión web de Hop&Eat que utilice cookies, esta sección se actualizará y, cuando la ley lo exija, se acompañará de un mecanismo de consentimiento de cookies.</p>
 
 <h2>5. Servicios de terceros y transferencias internacionales</h2>
-<p>Algunos proveedores están fuera del Espacio Económico Europeo (EEE). Las transferencias se realizan con las salvaguardas adecuadas (cláusulas contractuales tipo de la UE).</p>
+<p>Algunos proveedores están fuera del Espacio Económico Europeo (EEE). Las transferencias se realizan con las salvaguardas adecuadas (cláusulas contractuales tipo de la UE, el Marco de Privacidad de Datos UE-EE.UU. cuando resulte aplicable, o decisiones de adecuación).</p>
 <table>
   <tr><th>Servicio</th><th>Uso</th><th>País</th><th>Política</th></tr>
   <tr><td>Google Places API</td><td>Búsqueda de restaurantes y reseñas</td><td>EE.UU.</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
@@ -169,34 +202,58 @@
 </table>
 <p>No vendemos ni compartimos tus datos personales con terceros con fines publicitarios.</p>
 
-<h2>6. Edad mínima</h2>
-<p>Hop&Eat no está dirigida a menores de <strong>13 años</strong>. Si eres padre/madre o tutor y crees que tu hijo ha proporcionado datos, contáctanos en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a>.</p>
+<h2>6. Exactitud de datos de terceros y limitación de responsabilidad</h2>
+<p>Los nombres, direcciones, horarios, fotos, valoraciones y reseñas de restaurantes que se muestran en Hop&Eat proceden de la API de Google Places y reflejan datos proporcionados por Google y por terceros (propietarios de establecimientos, otros usuarios de la plataforma). Hop&Eat:</p>
+<ul>
+  <li>No verifica, edita ni garantiza de forma independiente la exactitud, integridad o actualidad de estos datos de terceros</li>
+  <li>No tiene control sobre errores, omisiones o cambios en estos datos (por ejemplo, un restaurante que ha cerrado, cambiado su horario o su carta) y no asume responsabilidad alguna al respecto</li>
+  <li>No es responsable del contenido de las reseñas de terceros, que expresan la opinión de sus autores individuales y no la de Hop&Eat</li>
+</ul>
+<p>En la máxima medida permitida por la ley aplicable, Hop&Eat excluye toda responsabilidad por cualquier pérdida o daño derivado de confiar en la información de restaurantes, valoraciones, reseñas o resúmenes generados por IA a partir de estos datos de terceros. Esta sección no afecta a los derechos legales que no puedan excluirse conforme a la normativa española o de la UE de protección de consumidores.</p>
 
-<h2>7. Tus derechos (GDPR)</h2>
-<p>Si eres residente en la UE, tienes derecho a: acceso, rectificación, supresión, portabilidad, oposición, limitación y retirada del consentimiento en cualquier momento.</p>
-<p>Para eliminar tu cuenta y todos tus datos: <strong>Perfil → Eliminar cuenta</strong> en la app.</p>
-<p>Para ejercer cualquier otro derecho contacta en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a>. Respondemos en 30 días. También puedes reclamar ante la <strong>AEPD</strong>: <a href="https://www.aepd.es">www.aepd.es</a>.</p>
+<h2>7. Privacidad de menores / edad mínima</h2>
+<p>Hop&Eat no está dirigida a menores de <strong>13 años</strong> y no recopilamos conscientemente datos personales de menores de 13 años. Si eres padre, madre o tutor y crees que tu hijo/a nos ha proporcionado datos personales, contáctanos en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> y los eliminaremos con prontitud.</p>
 
-<h2>8. Retención de datos</h2>
+<h2>8. Tus derechos (GDPR)</h2>
+<p>Si te encuentras en la Unión Europea / Espacio Económico Europeo, tienes los siguientes derechos conforme al GDPR:</p>
+<ul>
+  <li><strong>Acceso</strong> — obtener confirmación y acceso a los datos personales que tratamos sobre ti</li>
+  <li><strong>Rectificación</strong> — corregir datos inexactos o incompletos</li>
+  <li><strong>Supresión</strong> ("derecho al olvido")</li>
+  <li><strong>Limitación del tratamiento</strong></li>
+  <li><strong>Portabilidad</strong> — recibir tus datos en un formato estructurado y de uso común</li>
+  <li><strong>Oposición</strong> al tratamiento basado en interés legítimo</li>
+  <li><strong>Retirada del consentimiento</strong> en cualquier momento, sin afectar a la licitud del tratamiento previo</li>
+  <li><strong>No ser objeto de decisiones basadas únicamente en tratamiento automatizado</strong> que produzcan efectos jurídicos o te afecten significativamente — los resúmenes generados por IA son meramente informativos y no implican decisiones automatizadas sobre ti como individuo</li>
+</ul>
+<p>Puedes ejercer el derecho de supresión de forma directa e inmediata desde <strong>Perfil → Eliminar cuenta</strong> en la app. Para ejercer cualquier otro derecho, contáctanos en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a>. Responderemos en el plazo de un mes (ampliable dos meses más para solicitudes complejas, conforme al artículo 12 del GDPR).</p>
+<p>También puedes reclamar ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es">www.aepd.es</a>, o ante la autoridad de protección de datos de tu país de residencia en la UE.</p>
+
+<h2>9. Períodos de retención de datos</h2>
 <table>
   <tr><th>Tipo de dato</th><th>Período de retención</th></tr>
-  <tr><td>Ubicación</td><td>No se almacena (tiempo real)</td></tr>
-  <tr><td>Datos de cuenta</td><td>Hasta eliminar la cuenta</td></tr>
-  <tr><td>Favoritos</td><td>Hasta eliminarlos o cerrar la cuenta</td></tr>
-  <tr><td>Datos de suscripción</td><td>Gestionado por Apple/Google</td></tr>
+  <tr><td>Ubicación</td><td>No se almacena — se procesa en tiempo real y se descarta inmediatamente tras su uso</td></tr>
+  <tr><td>Datos de cuenta (nombre, email, proveedor de autenticación, foto)</td><td>Mientras la cuenta esté activa; se elimina en un plazo de 30 días tras solicitar la eliminación de la cuenta</td></tr>
+  <tr><td>Favoritos y preferencias</td><td>Mientras la cuenta esté activa; se elimina junto con la cuenta</td></tr>
+  <tr><td>Resúmenes y consultas de IA</td><td>No se almacenan más allá del tiempo necesario para generar y entregar la respuesta</td></tr>
+  <tr><td>Datos de suscripción/facturación</td><td>Gestionados por Apple/Google conforme a sus propias políticas; solo conservamos la confirmación del estado de la suscripción mientras la cuenta esté activa</td></tr>
+  <tr><td>Registros técnicos/de errores</td><td>Hasta 90 días</td></tr>
+  <tr><td>Correos de soporte y contacto</td><td>Hasta 24 meses, después se eliminan</td></tr>
+  <tr><td>Copias de seguridad rotativas</td><td>Hasta 30 días antes de sobrescribirse automáticamente</td></tr>
 </table>
+<p>Cuando debamos conservar determinados datos durante más tiempo para cumplir una obligación legal (por ejemplo, normativa fiscal o contable), lo haremos únicamente durante el período mínimo necesario y solo para esa finalidad.</p>
 
-<h2>9. Seguridad</h2>
-<p>Aplicamos cifrado HTTPS/TLS y reglas de acceso en Firebase. Ningún sistema es 100% seguro.</p>
+<h2>10. Seguridad</h2>
+<p>Aplicamos medidas técnicas y organizativas adecuadas, incluyendo cifrado HTTPS/TLS y reglas de acceso en Firebase. En caso de una violación de seguridad de datos personales que pueda suponer un riesgo para tus derechos y libertades, notificaremos a la AEPD en un plazo de 72 horas y a los usuarios afectados sin dilación indebida, conforme exige el GDPR. Ningún sistema es 100% seguro.</p>
 
-<h2>10. Cambios en esta política</h2>
-<p>Notificaremos cambios significativos a través de la app. El uso continuado implica aceptación.</p>
+<h2>11. Cambios en esta política</h2>
+<p>Podemos actualizar esta política periódicamente. Notificaremos cambios significativos a través de la app. El uso continuado tras la notificación implica aceptación.</p>
 
-<h2>11. Contacto</h2>
+<h2>12. Contacto</h2>
 <p>📧 <a href="mailto:support@hopandeat.app">support@hopandeat.app</a></p>
 
 <footer>
-  <p>Hop&Eat · hopandeat.app · España · v1.0 · Agosto 2026</p>
+  <p>Hop&Eat · hopandeat.app · España · v2.0 · Septiembre 2026</p>
 </footer>
 
 </body>
