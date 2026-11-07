@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy / Política de Privacidad — Hop&Eat</title>
+  <title>Privacy Policy / Política de Privacidad — HopAndEat</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px 24px; color: #333; line-height: 1.7; }
     h1 { color: #5C3317; border-bottom: 2px solid #C47A2B; padding-bottom: 10px; }
@@ -27,12 +27,12 @@
 <!-- ENGLISH VERSION -->
 <div class="lang-badge">🇬🇧 English</div>
 
-<h1>🍺 Privacy Policy — Hop&Eat</h1>
-<p><strong>Last updated:</strong> September 8, 2026<br>
-<strong>Version:</strong> 2.0</p>
+<h1>🍺 Privacy Policy — HopAndEat</h1>
+<p><strong>Last updated:</strong> November 7, 2026<br>
+<strong>Version:</strong> 2.1</p>
 
 <div class="highlight">
-  This Privacy Policy explains how Hop&Eat collects, uses, and protects your personal information, in compliance with the <strong>General Data Protection Regulation (GDPR)</strong> and applicable Spanish law.
+  This Privacy Policy explains how HopAndEat collects, uses, and protects your personal information, in compliance with the <strong>General Data Protection Regulation (GDPR)</strong> and applicable Spanish law.
 </div>
 
 <h2>1. Data Controller</h2>
@@ -40,64 +40,72 @@
 <strong>Contact:</strong> <a href="mailto:support@hopandeat.app">support@hopandeat.app</a><br>
 <strong>Country:</strong> Spain</p>
 
-<h2>2. What is Hop&Eat</h2>
-<p>Hop&Eat is a mobile application for iOS and Android that helps users find nearby restaurants and bars, view ratings and reviews, and save their favourite places. The app uses artificial intelligence to generate review summaries.</p>
+<h2>2. What is HopAndEat</h2>
+<p>HopAndEat is a mobile application for iOS and Android that helps users find nearby restaurants and bars, view ratings and reviews, and save their favourite places. The app uses artificial intelligence to generate review summaries.</p>
 
 <h2>3. Data We Collect and Legal Basis</h2>
 
 <h3>3.1 Location</h3>
-<p>We request access to your GPS location to show nearby restaurants. <strong>Legal basis:</strong> Performance of contract / legitimate interest. Location is processed in real time and never stored on our servers. You can revoke access at any time in your device settings.</p>
+<p>We request access to your GPS location to show nearby restaurants. <strong>Legal basis:</strong> Performance of contract / legitimate interest. Your location is sent directly from your device to Google Maps Platform to run each search, and is never stored on our servers. You can revoke access at any time in your device settings.</p>
 
 <h3>3.2 Account Data</h3>
-<p>If you register, we collect your name, email address, optional profile photo, and authentication provider (Apple, Google or email). <strong>Legal basis:</strong> Performance of contract.</p>
+<p>An account is required to use the app. We collect your name, email address, optional profile photo, and authentication provider (Apple, Google or email). <strong>Legal basis:</strong> Performance of contract.</p>
 
 <h3>3.3 Favourites and Preferences</h3>
-<p>We store your saved restaurants and preferences (language, theme). <strong>Legal basis:</strong> Performance of contract / consent.</p>
+<p>From version 1.2.1, for each favourite we store only the Google place ID, the city and the date you saved it; the name, rating and photo are fetched live from Google Maps Platform when you view them. Favourites saved with earlier versions may also hold that information until we remove it. Your language and theme preferences stay on your device. <strong>Legal basis:</strong> Performance of contract / consent.</p>
 
 <h3>3.4 Subscription Data</h3>
-<p>Payment data for Premium subscriptions is handled exclusively by Apple App Store or Google Play. We only receive subscription status confirmation via RevenueCat. <strong>Legal basis:</strong> Performance of contract.</p>
+<p>Payment data for Premium subscriptions is handled exclusively by Apple App Store or Google Play. We only receive subscription status confirmation via RevenueCat, and our server checks it before generating an AI summary. <strong>Legal basis:</strong> Performance of contract.</p>
 
 <h3>3.5 Artificial Intelligence (Review Summaries)</h3>
-<p>Hop&Eat uses AI (Anthropic's Claude API) to generate automatic summaries of publicly available restaurant reviews retrieved from Google Places. This feature:</p>
+<p>HopAndEat uses AI (Anthropic's Claude API) to generate automatic summaries of publicly available restaurant reviews retrieved from Google Maps. This feature:</p>
 <ul>
   <li>Is available exclusively to Premium users</li>
-  <li>Processes public Google Places reviews, not personal user data</li>
+  <li>Processes public Google Maps reviews, not personal user data</li>
   <li>Does not store the underlying reviews or the generated summaries on our servers beyond the time strictly needed to generate and deliver the response</li>
   <li>Relies on an automated language model and <strong>may produce summaries that are incomplete, outdated, or factually inaccurate</strong></li>
   <li>Is provided for general informational and convenience purposes only, and does not constitute advice of any kind (culinary, dietary, allergen-related, medical, or otherwise)</li>
 </ul>
 <div class="warning">
-  <strong>Important:</strong> You are solely responsible for any decision you make in reliance on an AI-generated summary, including decisions related to allergens, dietary restrictions, opening hours, pricing, or the suitability of an establishment. Hop&Eat is not liable for any loss, damage, or harm arising from reliance on AI-generated content. Always verify important information directly with the establishment before visiting.
+  <strong>Important:</strong> You are solely responsible for any decision you make in reliance on an AI-generated summary, including decisions related to allergens, dietary restrictions, opening hours, pricing, or the suitability of an establishment. HopAndEat is not liable for any loss, damage, or harm arising from reliance on AI-generated content. Always verify important information directly with the establishment before visiting.
 </div>
 <p><strong>Legal basis:</strong> Legitimate interest / implicit consent upon subscribing to Premium.</p>
 
+<h3>3.6 Crash and Diagnostic Data</h3>
+<p>We use Sentry to detect and fix errors. Crash reports and performance data include technical information such as your device model, operating system and app version. <strong>Legal basis:</strong> Legitimate interest in keeping the app working and secure.</p>
+
+<h3>3.7 Preventing Abuse</h3>
+<p>When you sign up with email, we use your IP address to limit how many accounts can be created from one network, and we check the email domain against a list of disposable addresses. We also keep a daily count of AI summaries per user to enforce the limit of 10 a day. <strong>Legal basis:</strong> Legitimate interest in protecting the service.</p>
+
 <h2>4. Cookies and Local Storage</h2>
-<p>Hop&Eat is a native mobile application and <strong>does not use cookies</strong>, web trackers, pixels, or third-party advertising identifiers of any kind. We use local storage on your own device (AsyncStorage) solely to remember your session, language, and theme preferences. This local data stays on your device, is never transmitted to our servers as a tracking mechanism, and is never shared with third parties for advertising or profiling purposes. If a future web version of Hop&Eat introduces cookies, this section will be updated and, where legally required, accompanied by a cookie consent mechanism.</p>
+<p>HopAndEat is a native mobile application and <strong>does not use cookies</strong>, web trackers, pixels, or third-party advertising identifiers of any kind. We use local storage on your own device (AsyncStorage) solely to remember your session, language, theme, profile picture and setup status. From version 1.2.1, restaurant data and photos from Google Maps are held in memory only and are not saved to your device. This local data stays on your device, is never transmitted to our servers as a tracking mechanism, and is never shared with third parties for advertising or profiling purposes. If a future web version of HopAndEat introduces cookies, this section will be updated and, where legally required, accompanied by a cookie consent mechanism.</p>
 
 <h2>5. Third-Party Services and International Transfers</h2>
 <p>Some providers are located outside the European Economic Area (EEA). Transfers are covered by appropriate safeguards (EU Standard Contractual Clauses, the EU-U.S. Data Privacy Framework where applicable, or adequacy decisions).</p>
 <table>
-  <tr><th>Service</th><th>Purpose</th><th>Country</th><th>Privacy Policy</th></tr>
-  <tr><td>Google Places API</td><td>Restaurant search and reviews</td><td>USA</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
-  <tr><td>Firebase (Google)</td><td>Database and authentication</td><td>USA</td><td><a href="https://firebase.google.com/support/privacy">View</a></td></tr>
-  <tr><td>RevenueCat</td><td>Premium subscription management</td><td>USA</td><td><a href="https://www.revenuecat.com/privacy">View</a></td></tr>
-  <tr><td>Anthropic Claude API</td><td>AI review summaries</td><td>USA</td><td><a href="https://www.anthropic.com/privacy">View</a></td></tr>
-  <tr><td>Apple App Store</td><td>iOS distribution and payments</td><td>USA/Ireland</td><td><a href="https://www.apple.com/legal/privacy/">View</a></td></tr>
-  <tr><td>Google Play</td><td>Android distribution and payments</td><td>USA</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
+  <tr><th>Service</th><th>Data it receives</th><th>Why</th><th>Location</th><th>Privacy Policy</th></tr>
+  <tr><td>Firebase / Google Cloud (Authentication, Firestore, Storage, Cloud Functions)</td><td>Name, email, sign-in provider, user ID, profile photo, favourites (place ID, city, date), daily AI usage count, and your IP address when you sign up with email</td><td>Accounts, data storage, server functions and blocking automated sign-ups</td><td>USA</td><td><a href="https://firebase.google.com/support/privacy">View</a></td></tr>
+  <tr><td>Google Maps Platform (Places, Geocoding, Routes)</td><td>Your location or the address you search for, search text, Route Mode origin and destination, language and IP address. This goes directly from your device</td><td>Finding places, reviews, photos, opening hours, parking and routes</td><td>USA</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
+  <tr><td>Sign in with Apple / Google Sign-In</td><td>Name, email and account identifier, only if you choose that sign-in method</td><td>Signing in</td><td>USA/Ireland</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
+  <tr><td>Anthropic (Claude API)</td><td>The text and rating of public Google reviews, and the language. No name, email, user ID or location</td><td>Generating AI review summaries</td><td>USA</td><td><a href="https://www.anthropic.com/privacy">View</a></td></tr>
+  <tr><td>RevenueCat</td><td>User ID, purchase and subscription status, and device and app information</td><td>Managing Premium and confirming it on our server</td><td>USA</td><td><a href="https://www.revenuecat.com/privacy">View</a></td></tr>
+  <tr><td>Sentry</td><td>Crash and error reports, performance data, device model, operating system and app version</td><td>Detecting and fixing errors</td><td>EU (Germany); Functional Software, Inc., USA</td><td><a href="https://sentry.io/privacy/">View</a></td></tr>
+  <tr><td>Apple App Store</td><td>Purchase and payment data. We never receive your card details</td><td>iOS distribution and payments</td><td>USA/Ireland</td><td><a href="https://www.apple.com/legal/privacy/">View</a></td></tr>
+  <tr><td>Google Play</td><td>Purchase and payment data. We never receive your card details</td><td>Android distribution and payments</td><td>USA</td><td><a href="https://policies.google.com/privacy">View</a></td></tr>
 </table>
 <p>We do not sell, rent, or share your personal data with third parties for advertising purposes.</p>
 
 <h2>6. Third-Party Data Accuracy and Limitation of Liability</h2>
-<p>Restaurant names, addresses, opening hours, photos, ratings, and reviews displayed in Hop&Eat are sourced from the Google Places API and reflect data supplied by Google and by third parties (restaurant owners, other platform users). Hop&Eat:</p>
+<p>Restaurant names, addresses, opening hours, photos, ratings, and reviews displayed in HopAndEat are sourced from Google Maps Platform and reflect data supplied by Google and by third parties (restaurant owners, other platform users). HopAndEat:</p>
 <ul>
   <li>Does not independently verify, edit, or guarantee the accuracy, completeness, or currency of this third-party data</li>
   <li>Has no control over, and assumes no responsibility for, errors, omissions, or changes in this data (for example, a restaurant that has closed, changed its hours, or changed its menu)</li>
-  <li>Is not responsible for the content of third-party reviews, which express the opinions of their individual authors and not of Hop&Eat</li>
+  <li>Is not responsible for the content of third-party reviews, which express the opinions of their individual authors and not of HopAndEat</li>
 </ul>
-<p>To the maximum extent permitted by applicable law, Hop&Eat disclaims all liability for any loss or damage resulting from your reliance on restaurant information, ratings, reviews, or AI-generated summaries derived from this third-party data. This section does not affect any statutory rights that cannot be excluded under Spanish or EU consumer protection law.</p>
+<p>To the maximum extent permitted by applicable law, HopAndEat disclaims all liability for any loss or damage resulting from your reliance on restaurant information, ratings, reviews, or AI-generated summaries derived from this third-party data. This section does not affect any statutory rights that cannot be excluded under Spanish or EU consumer protection law.</p>
 
 <h2>7. Children's Privacy / Minimum Age</h2>
-<p>Hop&Eat is not directed at children under <strong>13 years old</strong>, and we do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child has provided personal data to us, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> and we will delete it promptly.</p>
+<p>HopAndEat is not directed at children under <strong>13 years old</strong>, and we do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child has provided personal data to us, contact us at <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> and we will delete it promptly.</p>
 
 <h2>8. Your Rights (GDPR)</h2>
 <p>If you are located in the European Union / European Economic Area, you have the following rights under the GDPR:</p>
@@ -122,7 +130,9 @@
   <tr><td>Favourites and preferences</td><td>Retained while your account is active; deleted with the account</td></tr>
   <tr><td>AI review summaries and queries</td><td>Not stored beyond the time needed to generate and deliver the response</td></tr>
   <tr><td>Subscription / billing data</td><td>Managed by Apple/Google per their own policies; we retain only subscription status confirmations while the account is active</td></tr>
-  <tr><td>Technical/error logs</td><td>Up to 90 days</td></tr>
+  <tr><td>Technical/error logs, including crash reports and the record of an account deletion (user ID, email, date)</td><td>Up to 90 days</td></tr>
+  <tr><td>Daily AI usage count (user ID, date, count)</td><td>Replaced each day; it may remain after account deletion, with no name or email</td></tr>
+  <tr><td>Sign-up abuse counter (IP address, count)</td><td>Replaced by the next sign-up from the same network</td></tr>
   <tr><td>Support and contact emails</td><td>Up to 24 months, then deleted</td></tr>
   <tr><td>Rolling system backups</td><td>Up to 30 days before automatic overwrite</td></tr>
 </table>
@@ -142,12 +152,12 @@
 <!-- SPANISH VERSION -->
 <div class="lang-badge">🇪🇸 Español</div>
 
-<h1>🍺 Política de Privacidad — Hop&Eat</h1>
-<p><strong>Última actualización:</strong> 8 de septiembre de 2026<br>
-<strong>Versión:</strong> 2.0</p>
+<h1>🍺 Política de Privacidad — HopAndEat</h1>
+<p><strong>Última actualización:</strong> 7 de noviembre de 2026<br>
+<strong>Versión:</strong> 2.1</p>
 
 <div class="highlight">
-  Esta política de privacidad explica cómo Hop&Eat recopila, usa y protege tu información personal, de conformidad con el <strong>Reglamento General de Protección de Datos (GDPR)</strong> y la legislación española aplicable.
+  Esta política de privacidad explica cómo HopAndEat recopila, usa y protege tu información personal, de conformidad con el <strong>Reglamento General de Protección de Datos (GDPR)</strong> y la legislación española aplicable.
 </div>
 
 <h2>1. Responsable del tratamiento</h2>
@@ -155,64 +165,72 @@
 <strong>Email:</strong> <a href="mailto:support@hopandeat.app">support@hopandeat.app</a><br>
 <strong>País:</strong> España</p>
 
-<h2>2. Qué es Hop&Eat</h2>
-<p>Hop&Eat es una aplicación móvil disponible en iOS y Android que permite encontrar restaurantes y bares cercanos, ver valoraciones y reseñas, y guardar favoritos. La app utiliza inteligencia artificial para generar resúmenes de reseñas.</p>
+<h2>2. Qué es HopAndEat</h2>
+<p>HopAndEat es una aplicación móvil disponible en iOS y Android que permite encontrar restaurantes y bares cercanos, ver valoraciones y reseñas, y guardar favoritos. La app utiliza inteligencia artificial para generar resúmenes de reseñas.</p>
 
 <h2>3. Datos que recopilamos y base legal</h2>
 
 <h3>3.1 Ubicación</h3>
-<p>Solicitamos acceso a tu GPS para mostrarte restaurantes cercanos. <strong>Base legal:</strong> Ejecución del contrato / interés legítimo. No almacenamos tu ubicación en nuestros servidores; se procesa en tiempo real. Puedes revocar el acceso en los ajustes de tu dispositivo.</p>
+<p>Solicitamos acceso a tu GPS para mostrarte restaurantes cercanos. <strong>Base legal:</strong> Ejecución del contrato / interés legítimo. Tu ubicación se envía directamente desde tu dispositivo a Google Maps Platform para cada búsqueda y nunca se almacena en nuestros servidores. Puedes revocar el acceso en los ajustes de tu dispositivo.</p>
 
 <h3>3.2 Datos de cuenta</h3>
-<p>Si te registras, recopilamos tu nombre, email, foto de perfil (opcional) y proveedor de autenticación (Apple, Google o email). <strong>Base legal:</strong> Ejecución del contrato.</p>
+<p>Necesitas una cuenta para usar la app. Recopilamos tu nombre, email, foto de perfil (opcional) y proveedor de autenticación (Apple, Google o email). <strong>Base legal:</strong> Ejecución del contrato.</p>
 
 <h3>3.3 Favoritos y preferencias</h3>
-<p>Guardamos los restaurantes favoritos y tus preferencias de idioma y tema. <strong>Base legal:</strong> Ejecución del contrato / consentimiento.</p>
+<p>Desde la versión 1.2.1, de cada favorito guardamos solo el identificador del sitio en Google, la ciudad y la fecha; el nombre, la valoración y la foto se consultan en directo en Google Maps Platform al verlos. Los favoritos guardados con versiones anteriores pueden conservar esa información hasta que la eliminemos. Tus preferencias de idioma y tema se quedan en tu dispositivo. <strong>Base legal:</strong> Ejecución del contrato / consentimiento.</p>
 
 <h3>3.4 Datos de suscripción</h3>
-<p>Los datos de pago Premium son gestionados exclusivamente por Apple App Store o Google Play. Solo recibimos confirmación del estado de tu suscripción a través de RevenueCat. <strong>Base legal:</strong> Ejecución del contrato.</p>
+<p>Los datos de pago Premium son gestionados exclusivamente por Apple App Store o Google Play. Solo recibimos confirmación del estado de tu suscripción a través de RevenueCat, y nuestro servidor la comprueba antes de generar un resumen IA. <strong>Base legal:</strong> Ejecución del contrato.</p>
 
 <h3>3.5 Inteligencia Artificial (resúmenes de reseñas)</h3>
-<p>Hop&Eat utiliza IA (API de Claude de Anthropic) para generar resúmenes automáticos de reseñas públicas obtenidas de Google Places. Esta función:</p>
+<p>HopAndEat utiliza IA (API de Claude de Anthropic) para generar resúmenes automáticos de reseñas públicas obtenidas de Google Maps. Esta función:</p>
 <ul>
   <li>Está disponible exclusivamente para usuarios Premium</li>
-  <li>Procesa reseñas públicas de Google Places, no datos personales del usuario</li>
+  <li>Procesa reseñas públicas de Google Maps, no datos personales del usuario</li>
   <li>No almacena las reseñas procesadas ni los resúmenes generados en nuestros servidores más allá del tiempo estrictamente necesario para generar y entregar la respuesta</li>
   <li>Se basa en un modelo de lenguaje automatizado y <strong>puede generar resúmenes incompletos, desactualizados o inexactos</strong></li>
   <li>Se ofrece únicamente con fines informativos y de conveniencia, y no constituye asesoramiento de ningún tipo (culinario, dietético, sobre alérgenos, médico u otro)</li>
 </ul>
 <div class="warning">
-  <strong>Importante:</strong> Eres el único responsable de cualquier decisión que tomes basándote en un resumen generado por IA, incluidas decisiones relacionadas con alérgenos, restricciones dietéticas, horarios, precios o la idoneidad de un establecimiento. Hop&Eat no se hace responsable de ninguna pérdida, daño o perjuicio derivado de confiar en contenido generado por IA. Verifica siempre la información importante directamente con el establecimiento antes de acudir.
+  <strong>Importante:</strong> Eres el único responsable de cualquier decisión que tomes basándote en un resumen generado por IA, incluidas decisiones relacionadas con alérgenos, restricciones dietéticas, horarios, precios o la idoneidad de un establecimiento. HopAndEat no se hace responsable de ninguna pérdida, daño o perjuicio derivado de confiar en contenido generado por IA. Verifica siempre la información importante directamente con el establecimiento antes de acudir.
 </div>
 <p><strong>Base legal:</strong> Interés legítimo / consentimiento implícito al contratar Premium.</p>
 
+<h3>3.6 Datos de fallos y diagnóstico</h3>
+<p>Usamos Sentry para detectar y corregir errores. Los informes de fallos y los datos de rendimiento incluyen información técnica como el modelo del dispositivo, el sistema operativo y la versión de la app. <strong>Base legal:</strong> Interés legítimo en mantener la app funcionando y segura.</p>
+
+<h3>3.7 Prevención de abusos</h3>
+<p>Al registrarte con correo usamos tu dirección IP para limitar cuántas cuentas se crean desde una misma red, y comprobamos el dominio del correo frente a una lista de direcciones desechables. También guardamos un contador diario de resúmenes IA por usuario para aplicar el límite de 10 al día. <strong>Base legal:</strong> Interés legítimo en proteger el servicio.</p>
+
 <h2>4. Cookies y almacenamiento local</h2>
-<p>Hop&Eat es una aplicación móvil nativa y <strong>no utiliza cookies</strong>, rastreadores web, píxeles ni identificadores publicitarios de terceros de ningún tipo. Usamos almacenamiento local en tu propio dispositivo (AsyncStorage) únicamente para recordar tu sesión, idioma y tema. Estos datos permanecen en tu dispositivo, nunca se transmiten a nuestros servidores como mecanismo de seguimiento y nunca se comparten con terceros con fines publicitarios o de perfilado. Si en el futuro se lanza una versión web de Hop&Eat que utilice cookies, esta sección se actualizará y, cuando la ley lo exija, se acompañará de un mecanismo de consentimiento de cookies.</p>
+<p>HopAndEat es una aplicación móvil nativa y <strong>no utiliza cookies</strong>, rastreadores web, píxeles ni identificadores publicitarios de terceros de ningún tipo. Usamos almacenamiento local en tu propio dispositivo (AsyncStorage) únicamente para recordar tu sesión, idioma, tema, foto de perfil y estado de configuración. Desde la versión 1.2.1, los datos y fotos de restaurantes de Google Maps se mantienen solo en memoria y no se guardan en tu dispositivo. Estos datos permanecen en tu dispositivo, nunca se transmiten a nuestros servidores como mecanismo de seguimiento y nunca se comparten con terceros con fines publicitarios o de perfilado. Si en el futuro se lanza una versión web de HopAndEat que utilice cookies, esta sección se actualizará y, cuando la ley lo exija, se acompañará de un mecanismo de consentimiento de cookies.</p>
 
 <h2>5. Servicios de terceros y transferencias internacionales</h2>
 <p>Algunos proveedores están fuera del Espacio Económico Europeo (EEE). Las transferencias se realizan con las salvaguardas adecuadas (cláusulas contractuales tipo de la UE, el Marco de Privacidad de Datos UE-EE.UU. cuando resulte aplicable, o decisiones de adecuación).</p>
 <table>
-  <tr><th>Servicio</th><th>Uso</th><th>País</th><th>Política</th></tr>
-  <tr><td>Google Places API</td><td>Búsqueda de restaurantes y reseñas</td><td>EE.UU.</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
-  <tr><td>Firebase (Google)</td><td>Base de datos y autenticación</td><td>EE.UU.</td><td><a href="https://firebase.google.com/support/privacy">Ver</a></td></tr>
-  <tr><td>RevenueCat</td><td>Gestión de suscripciones Premium</td><td>EE.UU.</td><td><a href="https://www.revenuecat.com/privacy">Ver</a></td></tr>
-  <tr><td>Anthropic Claude API</td><td>Resúmenes IA de reseñas</td><td>EE.UU.</td><td><a href="https://www.anthropic.com/privacy">Ver</a></td></tr>
-  <tr><td>Apple App Store</td><td>Distribución y pagos iOS</td><td>EE.UU./Irlanda</td><td><a href="https://www.apple.com/legal/privacy/">Ver</a></td></tr>
-  <tr><td>Google Play</td><td>Distribución y pagos Android</td><td>EE.UU.</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
+  <tr><th>Servicio</th><th>Datos que recibe</th><th>Para qué</th><th>Ubicación</th><th>Política</th></tr>
+  <tr><td>Firebase / Google Cloud (Authentication, Firestore, Storage, Cloud Functions)</td><td>Nombre, correo, proveedor de acceso, identificador de usuario, foto de perfil, favoritos (identificador del sitio, ciudad y fecha), contador diario de uso de la IA y tu dirección IP al registrarte con correo</td><td>Cuentas, almacenamiento de datos, funciones de servidor y bloqueo de registros automatizados</td><td>EE.UU.</td><td><a href="https://firebase.google.com/support/privacy">Ver</a></td></tr>
+  <tr><td>Google Maps Platform (Places, Geocoding, Routes)</td><td>Tu ubicación o la dirección que buscas, el texto de búsqueda, origen y destino del Modo Ruta, idioma y dirección IP. Se envía directamente desde tu dispositivo</td><td>Encontrar sitios, reseñas, fotos, horarios, parking y rutas</td><td>EE.UU.</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
+  <tr><td>Iniciar sesión con Apple / Google</td><td>Nombre, correo e identificador de cuenta, solo si eliges ese método de acceso</td><td>Iniciar sesión</td><td>EE.UU./Irlanda</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
+  <tr><td>Anthropic (API de Claude)</td><td>El texto y la valoración de reseñas públicas de Google y el idioma. Ni nombre, ni correo, ni identificador de usuario, ni ubicación</td><td>Generar resúmenes IA de reseñas</td><td>EE.UU.</td><td><a href="https://www.anthropic.com/privacy">Ver</a></td></tr>
+  <tr><td>RevenueCat</td><td>Identificador de usuario, estado de compras y suscripción, e información del dispositivo y de la app</td><td>Gestionar Premium y confirmarlo en nuestro servidor</td><td>EE.UU.</td><td><a href="https://www.revenuecat.com/privacy">Ver</a></td></tr>
+  <tr><td>Sentry</td><td>Informes de fallos y errores, datos de rendimiento, modelo del dispositivo, sistema operativo y versión de la app</td><td>Detectar y corregir errores</td><td>UE (Alemania); Functional Software, Inc., EE.UU.</td><td><a href="https://sentry.io/privacy/">Ver</a></td></tr>
+  <tr><td>Apple App Store</td><td>Datos de compra y pago. Nunca recibimos los datos de tu tarjeta</td><td>Distribución y pagos en iOS</td><td>EE.UU./Irlanda</td><td><a href="https://www.apple.com/legal/privacy/">Ver</a></td></tr>
+  <tr><td>Google Play</td><td>Datos de compra y pago. Nunca recibimos los datos de tu tarjeta</td><td>Distribución y pagos en Android</td><td>EE.UU.</td><td><a href="https://policies.google.com/privacy">Ver</a></td></tr>
 </table>
 <p>No vendemos ni compartimos tus datos personales con terceros con fines publicitarios.</p>
 
 <h2>6. Exactitud de datos de terceros y limitación de responsabilidad</h2>
-<p>Los nombres, direcciones, horarios, fotos, valoraciones y reseñas de restaurantes que se muestran en Hop&Eat proceden de la API de Google Places y reflejan datos proporcionados por Google y por terceros (propietarios de establecimientos, otros usuarios de la plataforma). Hop&Eat:</p>
+<p>Los nombres, direcciones, horarios, fotos, valoraciones y reseñas de restaurantes que se muestran en HopAndEat proceden de Google Maps Platform y reflejan datos proporcionados por Google y por terceros (propietarios de establecimientos, otros usuarios de la plataforma). HopAndEat:</p>
 <ul>
   <li>No verifica, edita ni garantiza de forma independiente la exactitud, integridad o actualidad de estos datos de terceros</li>
   <li>No tiene control sobre errores, omisiones o cambios en estos datos (por ejemplo, un restaurante que ha cerrado, cambiado su horario o su carta) y no asume responsabilidad alguna al respecto</li>
-  <li>No es responsable del contenido de las reseñas de terceros, que expresan la opinión de sus autores individuales y no la de Hop&Eat</li>
+  <li>No es responsable del contenido de las reseñas de terceros, que expresan la opinión de sus autores individuales y no la de HopAndEat</li>
 </ul>
-<p>En la máxima medida permitida por la ley aplicable, Hop&Eat excluye toda responsabilidad por cualquier pérdida o daño derivado de confiar en la información de restaurantes, valoraciones, reseñas o resúmenes generados por IA a partir de estos datos de terceros. Esta sección no afecta a los derechos legales que no puedan excluirse conforme a la normativa española o de la UE de protección de consumidores.</p>
+<p>En la máxima medida permitida por la ley aplicable, HopAndEat excluye toda responsabilidad por cualquier pérdida o daño derivado de confiar en la información de restaurantes, valoraciones, reseñas o resúmenes generados por IA a partir de estos datos de terceros. Esta sección no afecta a los derechos legales que no puedan excluirse conforme a la normativa española o de la UE de protección de consumidores.</p>
 
 <h2>7. Privacidad de menores / edad mínima</h2>
-<p>Hop&Eat no está dirigida a menores de <strong>13 años</strong> y no recopilamos conscientemente datos personales de menores de 13 años. Si eres padre, madre o tutor y crees que tu hijo/a nos ha proporcionado datos personales, contáctanos en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> y los eliminaremos con prontitud.</p>
+<p>HopAndEat no está dirigida a menores de <strong>13 años</strong> y no recopilamos conscientemente datos personales de menores de 13 años. Si eres padre, madre o tutor y crees que tu hijo/a nos ha proporcionado datos personales, contáctanos en <a href="mailto:support@hopandeat.app">support@hopandeat.app</a> y los eliminaremos con prontitud.</p>
 
 <h2>8. Tus derechos (GDPR)</h2>
 <p>Si te encuentras en la Unión Europea / Espacio Económico Europeo, tienes los siguientes derechos conforme al GDPR:</p>
@@ -237,7 +255,9 @@
   <tr><td>Favoritos y preferencias</td><td>Mientras la cuenta esté activa; se elimina junto con la cuenta</td></tr>
   <tr><td>Resúmenes y consultas de IA</td><td>No se almacenan más allá del tiempo necesario para generar y entregar la respuesta</td></tr>
   <tr><td>Datos de suscripción/facturación</td><td>Gestionados por Apple/Google conforme a sus propias políticas; solo conservamos la confirmación del estado de la suscripción mientras la cuenta esté activa</td></tr>
-  <tr><td>Registros técnicos/de errores</td><td>Hasta 90 días</td></tr>
+  <tr><td>Registros técnicos/de errores, incluidos informes de fallos y el registro de eliminación de cuenta (identificador de usuario, correo y fecha)</td><td>Hasta 90 días</td></tr>
+  <tr><td>Contador diario de uso de la IA (identificador de usuario, fecha y número)</td><td>Se sustituye cada día; puede permanecer tras eliminar la cuenta, sin nombre ni correo</td></tr>
+  <tr><td>Contador de abuso en el registro (dirección IP y número)</td><td>Se sustituye con el siguiente registro desde la misma red</td></tr>
   <tr><td>Correos de soporte y contacto</td><td>Hasta 24 meses, después se eliminan</td></tr>
   <tr><td>Copias de seguridad rotativas</td><td>Hasta 30 días antes de sobrescribirse automáticamente</td></tr>
 </table>
@@ -253,7 +273,7 @@
 <p>📧 <a href="mailto:support@hopandeat.app">support@hopandeat.app</a></p>
 
 <footer>
-  <p>Hop&Eat · hopandeat.app · España · v2.0 · Septiembre 2026</p>
+  <p>HopAndEat · hopandeat.app · España · v2.1 · Noviembre 2026</p>
 </footer>
 
 </body>
