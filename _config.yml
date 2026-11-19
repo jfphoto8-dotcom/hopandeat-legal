@@ -1,0 +1,4 @@
+# GitHub Pages runs Jekyll, which skips dot-folders unless they're listed
+# here. .well-known holds the iOS Universal Links and Android App Links files.
+include:
+  - .well-known

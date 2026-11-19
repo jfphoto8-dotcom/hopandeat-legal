@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.hopandeat.app",
+      "sha256_cert_fingerprints": [
+        "DB:C4:94:D1:90:CE:6C:E9:19:A9:9D:C0:62:F6:F5:ED:26:4A:97:47:1D:88:8F:A0:24:D7:7E:1C:0C:86:73:01"
+      ]
+    }
+  }
+]

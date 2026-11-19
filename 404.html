@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <!-- GitHub Pages serves this file for any path that doesn't exist, which is
+       how https://hopandeat.app/l/{listId}?t={token} (shared-list invites)
+       gets a page. With the app installed, iOS Universal Links / Android App
+       Links open the app instead and this page is never shown. It never shows
+       Google Maps content (place names, photos, ratings) — only the list name,
+       the owner's first name and how many places it has, from the
+       listInvitePreview Cloud Function, which checks the invite token. -->
+  <meta property="og:title" content="Únete a una lista en HopAndEat">
+  <meta property="og:description" content="Planea con tus amigos dónde comer y beber. Descarga HopAndEat para unirte.">
+  <meta property="og:image" content="https://hopandeat.app/logo.png">
+  <title>HopAndEat</title>
+  <style>
+    :root {
+      --cacao: #5C3317;
+      --cacao-dark: #3E1F0D;
+      --caramel: #C47A2B;
+      --cream: #FBF7F4;
+      --text: #2C1A0E;
+      --text-secondary: #7D4A2A;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    main {
+      width: 100%;
+      max-width: 440px;
+      background: #fff;
+      border: 1px solid rgba(196, 122, 43, 0.25);
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(62, 31, 13, 0.08);
+    }
+    .logo { width: 72px; height: 72px; border-radius: 16px; }
+    .kicker { margin: 16px 0 4px; color: var(--caramel); font-weight: 700; font-size: 15px; }
+    h1 { margin: 4px 0 8px; font-size: 26px; line-height: 1.2; color: var(--cacao-dark); overflow-wrap: anywhere; }
+    .meta { margin: 0 0 20px; color: var(--text-secondary); font-size: 15px; }
+    .cta { margin: 8px 0 16px; font-weight: 800; font-size: 17px; color: var(--cacao); }
+    .badges { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+    .badges img { height: 48px; width: auto; display: block; }
+    .badges .play img { height: 70px; margin: -11px 0; }
+    .secondary { margin-top: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+    .secondary a, .secondary button {
+      color: var(--caramel); font-weight: 700; background: none; border: 0; padding: 0;
+      font: inherit; cursor: pointer; text-decoration: underline;
+    }
+    .home { display: inline-block; margin-top: 16px; color: var(--caramel); font-weight: 700; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 2.5px solid var(--caramel); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="/logo.png" alt="HopAndEat">
+
+    <!-- Invite (only for /l/{id}?t={token}) -->
+    <section id="invite" hidden>
+      <p class="kicker" id="inviter"></p>
+      <h1 id="list-name"></h1>
+      <p class="meta" id="places"></p>
+      <p class="cta" id="cta"></p>
+      <div class="badges">
+        <a id="appstore" href="https://apps.apple.com/app/id6805847481" rel="noopener">
+          <img src="/appstore.svg" alt="App Store">
+        </a>
+        <a id="googleplay" class="play" href="https://play.google.com/store/apps/details?id=com.hopandeat.app" rel="noopener">
+          <img src="/googleplay.png" alt="Google Play">
+        </a>
+      </div>
+      <p class="secondary">
+        <span id="paste-hint"></span><br>
+        <button type="button" id="copy"></button>
+        · <a id="open-app" href="#"></a>
+      </p>
+    </section>
+
+    <!-- Loading / invalid invite / plain 404 -->
+    <section id="message">
+      <h1 id="message-title">…</h1>
+      <p class="meta" id="message-text"></p>
+      <a class="home" href="/" id="home-link">hopandeat.app</a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var es = (navigator.language || 'es').toLowerCase().indexOf('es') === 0;
+      var T = es ? {
+        inviter: function (n) { return (n || 'Alguien') + ' te invita a su lista'; },
+        places: function (c) { return c === 1 ? '1 sitio en la lista' : c + ' sitios en la lista'; },
+        cta: 'Descarga HopAndEat para unirte',
+        pasteHint: 'Después de instalarla y crear tu cuenta, pega este enlace en Favoritos → Listas → «¿Tienes una invitación?».',
+        copy: 'Copiar enlace', copied: '¡Copiado!',
+        openApp: '¿Ya tienes la app? Ábrela',
+        invalidTitle: 'Esta invitación no es válida',
+        invalidText: 'Puede que el enlace haya caducado. Pide uno nuevo a quien te invitó.',
+        fullTitle: 'Esta lista ya está completa',
+        errorTitle: 'No hemos podido cargar la invitación',
+        errorText: 'Comprueba tu conexión e inténtalo de nuevo.',
+        notFoundTitle: 'Página no encontrada',
+        notFoundText: 'Esta página no existe.',
+        home: 'Ir a hopandeat.app'
+      } : {
+        inviter: function (n) { return (n || 'Someone') + ' invited you to their list'; },
+        places: function (c) { return c === 1 ? '1 place on the list' : c + ' places on the list'; },
+        cta: 'Download HopAndEat to join',
+        pasteHint: 'After installing it and creating your account, paste this link in Favorites → Lists → “Got an invite?”.',
+        copy: 'Copy link', copied: 'Copied!',
+        openApp: 'Already have the app? Open it',
+        invalidTitle: 'This invite is not valid',
+        invalidText: 'The link may have expired. Ask whoever invited you for a new one.',
+        fullTitle: 'This list is full',
+        errorTitle: "We couldn't load the invite",
+        errorText: 'Check your connection and try again.',
+        notFoundTitle: 'Page not found',
+        notFoundText: "This page doesn't exist.",
+        home: 'Go to hopandeat.app'
+      };
+      if (!es) document.documentElement.lang = 'en';
+      document.getElementById('home-link').textContent = T.home;
+
+      function show(title, text) {
+        document.getElementById('invite').hidden = true;
+        document.getElementById('message').hidden = false;
+        document.getElementById('message-title').textContent = title;
+        document.getElementById('message-text').textContent = text || '';
+      }
+
+      var match = location.pathname.match(/^\/l\/([A-Za-z0-9_-]{1,64})\/?$/);
+      var token = new URLSearchParams(location.search).get('t') || '';
+      if (!match) {
+        show(T.notFoundTitle, T.notFoundText);
+        return;
+      }
+      if (!/^[A-Za-z0-9_-]{20,64}$/.test(token)) {
+        show(T.invalidTitle, T.invalidText);
+        return;
+      }
+      var listId = match[1];
+      var shareUrl = 'https://hopandeat.app/l/' + listId + '?t=' + token;
+
+      // Android: Google Play hands this referrer back to the app on first
+      // launch, so the invite opens after sign-up (deferred deep link).
+      document.getElementById('googleplay').href =
+        'https://play.google.com/store/apps/details?id=com.hopandeat.app&referrer=' +
+        encodeURIComponent('hl_invite=' + listId + '.' + token);
+      document.getElementById('open-app').href = 'hopandeat:///l/' + listId + '?t=' + token;
+
+      fetch('https://us-central1-hopandeat-bd237.cloudfunctions.net/listInvitePreview?id=' +
+          encodeURIComponent(listId) + '&t=' + encodeURIComponent(token))
+        .then(function (res) {
+          if (res.status === 404) return null;
+          if (!res.ok) throw new Error(String(res.status));
+          return res.json();
+        })
+        .then(function (data) {
+          if (!data) { show(T.invalidTitle, T.invalidText); return; }
+          if (data.full) { show(T.fullTitle, ''); return; }
+          document.getElementById('inviter').textContent = T.inviter(String(data.inviterFirstName || ''));
+          document.getElementById('list-name').textContent = String(data.name || '');
+          document.getElementById('places').textContent = T.places(Number(data.placeCount) || 0);
+          document.getElementById('cta').textContent = T.cta;
+          document.getElementById('paste-hint').textContent = T.pasteHint;
+          document.getElementById('open-app').textContent = T.openApp;
+          var copy = document.getElementById('copy');
+          copy.textContent = T.copy;
+          copy.addEventListener('click', function () {
+            (navigator.clipboard ? navigator.clipboard.writeText(shareUrl) : Promise.reject())
+              .then(function () { copy.textContent = T.copied; })
+              .catch(function () { window.prompt(T.copy, shareUrl); });
+          });
+          document.title = String(data.name || 'HopAndEat') + ' · HopAndEat';
+          document.getElementById('message').hidden = true;
+          document.getElementById('invite').hidden = false;
+        })
+        .catch(function () { show(T.errorTitle, T.errorText); });
+    })();
+  </script>
+</body>
+</html>

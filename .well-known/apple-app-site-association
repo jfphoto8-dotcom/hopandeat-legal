@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["H79U374Q4B.com.hopandeat.app"],
+        "components": [
+          { "/": "/l/*", "comment": "Shared list invites (HopAndEat 1.3.0+)" }
+        ]
+      }
+    ]
+  }
+}
