@@ -13,9 +13,20 @@
        the owner's first name and how many places and people it has, from the
        listInvitePreview Cloud Function, which checks the invite token.
        Fonts are self-hosted (fonts/, SIL OFL) so no request goes to Google Fonts. -->
-  <meta property="og:title" content="Únete a una lista en HopAndEat">
-  <meta property="og:description" content="Planea con tus amigos dónde comer y beber. Descarga HopAndEat para unirte.">
-  <meta property="og:image" content="https://hopandeat.app/logo.png">
+  <!-- Link previews (WhatsApp, iMessage…) read these tags without running the
+       script below, and GitHub Pages serves the same static file for every
+       invite, so the preview can't name the inviter or follow the reader's
+       language: it's in Spanish, the app's main market. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HopAndEat">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Te han invitado a una lista en HopAndEat">
+  <meta property="og:description" content="Únete, añade tus sitios y votad entre todos a dónde ir.">
+  <meta property="og:image" content="https://hopandeat.app/og-invite.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HopAndEat: te han invitado a una lista">
+  <meta name="twitter:card" content="summary_large_image">
   <title>HopAndEat</title>
   <style>
     @font-face { font-family: 'Fraunces'; font-weight: 700; font-display: swap; src: url('/fonts/Fraunces_700Bold.ttf') format('truetype'); }
@@ -52,12 +63,14 @@
       padding: calc(20px + env(safe-area-inset-top)) 16px 72px;
       text-align: center;
     }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); }
+    /* The app's own wordmark (same image as the Home header), recoloured cream. */
     .wordmark {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-weight: 700; font-size: 13px; letter-spacing: 3px; color: var(--cream);
-      text-decoration: none;
+      display: block; width: 118px; height: 23px; background: var(--cream);
+      -webkit-mask: url('/wordmark.png') center / contain no-repeat;
+      mask: url('/wordmark.png') center / contain no-repeat;
     }
-    .wordmark svg { width: 16px; height: 16px; }
     .avatar {
       width: 84px; height: 84px; margin: 22px auto 12px;
       border-radius: 50%; background: var(--sand); border: 4px solid var(--cream);
@@ -136,9 +149,9 @@
 <body>
   <header>
     <div class="wrap">
-      <a class="wordmark" href="/" aria-label="HopAndEat">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        HOP AND EAT
+      <a class="brand" href="/" aria-label="HopAndEat">
+        <img src="/app-icon.png" alt="" width="34" height="34">
+        <span class="wordmark" aria-hidden="true"></span>
       </a>
       <div class="avatar" id="avatar" aria-hidden="true">·</div>
       <p class="inviter" id="inviter">&nbsp;</p>
@@ -192,7 +205,7 @@
       var forced = new URLSearchParams(location.search).get('lang');
       var es = forced ? forced === 'es' : lang.indexOf('es') === 0;
       var T = es ? {
-        inviter: function (n) { return (n || 'Alguien') + ' te invita a su lista'; },
+        inviter: function (n) { return (n || 'Alguien') + ' te ha invitado a su lista'; },
         places: function (c) { return c === 1 ? '1 sitio' : c + ' sitios'; },
         people: function (c) { return c === 1 ? '1 persona' : c + ' personas'; },
         lead: 'Únete para ver los sitios, añadir los tuyos y votar entre todos a dónde ir.',
